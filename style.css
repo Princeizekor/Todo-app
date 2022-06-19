@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+:root {
+    --gray: hsl(0, 0%, 98%);
+    --check: hsl(236, 33%, 92%);
+    --white: white;
+    --shadow: hsl(233, 11%, 84%);
+    --bright: hsl(220, 98%, 61%);
+    --darkgray: hsl(236, 9%, 61%);
+    --vdgray: hsl(235, 19%, 35%);
+    --black: black;
+    --off: black;
+    --neet: rgb(31, 29, 29);
+    --gradient:hsl(280, 87%, 65%);
+    --shadow: 0px 15px 20px 0px hsl(233, 11%, 84%);
+    --sat: hsl(235, 24%, 19%);
+    --lite: url("./images/bg-desktop-light.jpg");
+    --blink: url("./images/bg-mobile-light.jpg");
+}
+.move {
+    background-color: var(--gradient);
+    display: block;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+body {
+    scroll-behavior: smooth;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'League Spartan', sans-serif;
+    background-color: var(--gray);
+}
+
+#head {
+    width: 100%;
+    height: auto;
+    transition: 0.5s all ease;
+}
+
+.bg-image {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg {
+    background-image: var(--lite);
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transition: 0.5s all ease;
+}
+
+.bgDark {
+    position: absolute;
+    width: 100%;
+    transition: 0.5s all ease;
+}
+
+.todo {
+    position: absolute;
+    top: 80px;
+    width: 530px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 7px;
+}
+
+.moon {
+    width: 20px;
+    height: 20px;
+    transition: 0.5s all ease;
+}
+
+.sun {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0%;
+    display: none;
+    transition: 0.5s all ease;
+}
+.long {
+    display: block;
+}
+
+#form {
+    position: absolute;
+    top: 70px;
+    width: 530px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--white);
+    transition: 0.5s all ease;
+}
+
+#text {
+    height: 30px;
+    width: 400px;
+    border: none;
+    outline: none;
+    transition: 0.5s all ease;
+    color: var(--off);
+    background-color: var(--white);
+}
+
+.check {
+    position: absolute;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--check);
+    left: 25px;
+    top: 15px;
+    font-weight: 400;
+}
+
+.call {
+    width: 530px;
+    border-radius: 5px;
+    height: auto;
+    position: absolute;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--shadow);
+    box-shadow: var(--shadow);
+    transition: 0.5s all ease;
+}
+
+
+.complete {
+    width: 530px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 5px solid var(--gray);
+    color: var(--off);
+    background-color: var(--white);
+    transition: 0.5s all ease;
+}
+
+.pass {
+    display: flex;
+}
+.complete:first-child {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.complete:last-child {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.line {
+    text-decoration: line-through;
+}
+.java {
+    margin-left: 20px;
+    margin-top: 4px;
+    word-break: break-all;
+}
+
+.cross {
+    margin-right: 20px;
+    width: 15px;
+    height: 15px;
+}
+
+.good {
+    background-image: url("./images/icon-check.svg");
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-size: contain;
+}
+
+.shows {
+    background-image: url("./images/icon-cross.svg");
+    width: 15px;
+    height: 15px;
+}
+.checks {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--check);
+    margin-left: 15px;
+    top: 15px;
+    font-weight: 400;
+}
+
+.goods {
+    width: 10px;
+    height: 10px;
+    display: none;
+}
+
+.active {
+    display: flex;
+    width: 530px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 1px;
+    background-color: var(--white);
+    transition: 0.5s all ease;
+}
+
+.add {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.alls {
+    width: 40px;
+    color: var(--bright);
+    font-weight: 600;
+}
+
+.actives {
+    width: 50px;
+    color: var(--darkgray);
+    font-weight: 600;
+}
+.actives:hover {
+    color: var(--neet);
+}
+
+.completeds {
+    width: 60px;
+    color: var(--darkgray);
+    font-weight: 600;
+}
+.completeds:hover {
+    color: var(--neet);
+}
+
+.all {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--darkgray);
+    font-weight: 600;
+}
+
+.all:hover {
+    color: var(--neet);
+}
+
+.items {
+    font-size: 15px;
+    color: var(--darkgray);
+    font-weight: 400;
+}
+
+.line {
+    text-decoration: line-through;
+}
+
+
+@media screen and (max-width: 767px) {
+    .bg-image {
+        width: 100%;
+        margin: 0%;
+        height: auto;
+        display: flex;
+        justify-content: none;
+        align-items: center;
+    }
+    
+    .bg {
+        background-image: var(--blink);
+        background-size: cover;
+        position: relative;
+        width: 100%;
+        transition: 0.5s all ease;
+    }
+    
+    
+    .todo {
+        width: 90%;
+    }
+    
+    .text {
+        font-size: 30px;
+    }
+
+    #form {
+        width: 100%;
+    }
+    
+    #text {
+        width: 70%;
+        border: none;
+    }
+    
+    .call {
+        width: 100%;
+    }
+    
+    
+    .complete {
+        width: 100%;
+    }
+    .active {
+        width: 100%;
+    }
+    
+}
