@@ -80,7 +80,7 @@ const showAllTodo = () => {
     })
     const completed = data.filter((todo) => todo.completed === true)
     const remaining = document.createElement("div")
-    remaining.innerHTML = `<div class="active">
+    remaining.innerHTML = `<div class="active led">
             <p class="items">${data.length - completed.length} items left</p>
             <div class="add">
                 <button class="alls" onclick="showAll()">All</button>
@@ -91,6 +91,22 @@ const showAllTodo = () => {
 
         </div>`
     document.querySelector(".call").appendChild(remaining)
+    
+    const readable = document.createElement("div")
+    readable.innerHTML = `<div class="active brand">
+    <p class="items">${data.length - completed.length} items left</p>
+  
+    <button class="all">Clear Completed</button>
+
+        </div> 
+        <div class="add grade">
+        <button class="alls" onclick="showAll()">All</button>
+        <button class="actives" onclick="showActive()">Active</button>
+        <button class="completeds" onclick="showCompleted()">Completed</button>
+        </div>
+        `
+
+        document.querySelector(".call").appendChild(readable)
 }
 
 showAllTodo()

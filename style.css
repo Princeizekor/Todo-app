@@ -131,7 +131,7 @@ body {
 
 .check {
     position: absolute;
-    min-width: 20px;
+    width: 20px;
     height: 20px;
     border-radius: 50px;
     display: flex;
@@ -297,6 +297,15 @@ body {
 .line {
     text-decoration: line-through;
 }
+.real {
+    display: none;
+}
+.brand {
+    display: none;
+}
+.grade {
+    display: none;
+}
 
 
 @media screen and (max-width: 767px) {
@@ -334,14 +343,47 @@ body {
         width: 70%;
         border: none;
     }
-    
     .call {
         width: 100%;
     }
+    .brand {
+        display: flex;
+    }
+    .real {
+        width: 100%;
+        border-radius: 5px;
+        height: auto;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--shadow);
+        box-shadow: var(--shadow);
+        transition: 0.5s all ease;
+    }
+ 
+    .led {
+        display: none;
+    }
+ 
+    .add {
+        display: flex;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        margin-top: 20px;
+        background-color: var(--white);
+        transition: 0.5s all ease;
+    }
     
-    
+    .alls {
+        width: 20px;
+    }
     .complete {
         width: 100%;
+
     }
     .active {
         width: 100%;
