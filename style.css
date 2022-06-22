@@ -254,8 +254,11 @@ body {
 
 .alls {
     width: 40px;
-    color: var(--bright);
     font-weight: 600;
+    color: var(--darkgray);
+}
+.alls:hover {
+    color: var(--bright);
 }
 
 .actives {
@@ -264,7 +267,7 @@ body {
     font-weight: 600;
 }
 .actives:hover {
-    color: var(--neet);
+    color: var(--bright);
 }
 
 .completeds {
@@ -273,7 +276,7 @@ body {
     font-weight: 600;
 }
 .completeds:hover {
-    color: var(--neet);
+    color: var(--bright);
 }
 
 .all {
@@ -285,7 +288,7 @@ body {
 }
 
 .all:hover {
-    color: var(--neet);
+    color: var(--bright);
 }
 
 .items {
